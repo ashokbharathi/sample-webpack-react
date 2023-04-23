@@ -1,7 +1,7 @@
 {
   "name": "sample",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/js/app.js",
   "license": "MIT",
   "scripts": {
     "devBuild": "webpack --config webpack.config.js --mode development",

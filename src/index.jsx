@@ -3,7 +3,7 @@ import * as ReactDOM from 'react-dom';
 
 const AppContainer=()=>{
     return(
-        <div>Main app content</div>
+        <div>Main app content new</div>
     )
 }
 
