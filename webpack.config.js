@@ -1,4 +1,3 @@
-// noinspection JSUnusedLocalSymbols
 const webpack = require("webpack");
 var path = require('path');
 const fs = require('fs');
@@ -11,24 +10,6 @@ module.exports = (env, argv) => {
         output: {
             filename: argv.mode === "production" ? "dist/js/[name].min.js" : "dist/js/[name].js",
             path: __dirname
-        },
-        //commented to build a custom pages
-        // "optimization": {
-        //     splitChunks: {
-        //         cacheGroups: {
-        //             vendor: {
-        //                 chunks: 'all',
-        //                 name: 'vendor',
-        //                 test: 'vendor',
-        //                 enforce: true
-        //             },
-        //         }
-        //     },
-        //     runtimeChunk: true
-        // },
-        resolve: {
-            // Add '.ts' and '.tsx' as resolvable extensions.
-            extensions: [".ts", ".tsx", ".js", ".json"],
         },
         module: {
             rules: [
@@ -44,11 +25,6 @@ module.exports = (env, argv) => {
                     }
             ]
         },
-
-        // When importing a module whose path matches one of the following, just
-        // assume a corresponding global variable exists and use that instead.
-        // This is important because it allows us to avoid bundling all of our
-        // dependencies, which allows browsers to cache those libraries between builds.
         externals: {
             
         },
